@@ -1,0 +1,91 @@
+{
+	id: "5D64E24CFE51BAC7"
+	group: "2B02DDFFF82BC1BF"
+	order_index: 1
+	filename: "stability"
+	title: "Stability"
+	icon: "minecraft:water_bucket"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Secret of Alchemy"
+			x: 0.0d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["33BDFDDC3B6215E5"]
+			id: "28A0067A6D296267"
+			tasks: [
+				{
+					id: "04FF3A1E4457CF1F"
+					type: "item"
+					item: "minecraft:amethyst_shard"
+				}
+				{
+					id: "2974CD1FE751C798"
+					type: "item"
+					item: "kubejs:catalyst"
+				}
+			]
+			rewards: [{
+				id: "3F0093BDDBC44DD7"
+				type: "item"
+				item: "kubejs:catalyst"
+			}]
+		}
+		{
+			title: "Even more cacti"
+			x: 0.0d
+			y: 1.0d
+			dependencies: ["33BDFDDC3B6215E5"]
+			id: "552A1F6C16579057"
+			tasks: [{
+				id: "1B137211BC08DF9C"
+				type: "item"
+				item: "botanypotstiers:elite_light_gray_concrete_hopper_botany_pot"
+			}]
+		}
+		{
+			title: "Age of growth."
+			x: 0.0d
+			y: -2.0d
+			shape: "square"
+			id: "3A0735AC96DD46F8"
+			tasks: [
+				{
+					id: "24AEFE2616E75E85"
+					type: "item"
+					item: "create:blaze_burner"
+				}
+				{
+					id: "3B8D45DCCF8B5122"
+					type: "item"
+					item: "create:brass_ingot"
+				}
+				{
+					id: "2CB8DBFC4FCE85E4"
+					type: "item"
+					item: "create:brass_nugget"
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: -1.0d
+			id: "0503625E29135346"
+			tasks: [
+				{
+					id: "19190158ABB835E4"
+					type: "item"
+					item: "minecraft:gravel"
+				}
+				{
+					id: "5389DE8B975FC5FC"
+					type: "item"
+					item: "create:zinc_nugget"
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

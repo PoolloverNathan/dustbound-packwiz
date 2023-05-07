@@ -1,0 +1,62 @@
+{
+	id: "1E920D7A07BC2679"
+	group: ""
+	order_index: 0
+	filename: "death"
+	title: "Death..."
+	icon: "minecraft:amethyst_cluster"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [{
+		title: "&4&oFading..."
+		icon: "kubejs:life_crystal"
+		x: 0.0d
+		y: 0.0d
+		shape: "square"
+		subtitle: "&cWhy am I still alive?"
+		description: [
+			"&o&7They have failed, neglected their form."
+			"&oAnd yet they remain."
+			"&7&oYes, it seems their body refuses to stay down for long."
+			"&oIt seems they barely live."
+			"&oThey hold only a half-life,"
+			"&oan ever fading form."
+			"&7&oI am curious to see how it plays out."
+			"&7&oPerhaps we should give them a chance to return to their full potential."
+			"&oMatter and soul collide,"
+			"&oin the body where you reside,"
+			"&oturn back the clock,"
+			"&oundo the lock,"
+			"&otake back your tarnished pride."
+		]
+		can_repeat: true
+		invisible: true
+		invisible_until_tasks: 1
+		id: "2E4EB0E5A801B30C"
+		tasks: [
+			{
+				id: "1FBA2FE1341A29D4"
+				type: "item"
+				item: "kubejs:life_crystal"
+				consume_items: true
+			}
+			{
+				id: "20296FBB14E100C2"
+				type: "stat"
+				secret: true
+				stat: "minecraft:deaths"
+				value: 2
+			}
+		]
+		rewards: [{
+			id: "310C7DE3242C51E3"
+			type: "command"
+			title: "&oRepair"
+			icon: "fruittrees:redlove"
+			auto: "disabled"
+			command: "/effect clear @p"
+			player_command: false
+		}]
+	}]
+	quest_links: [ ]
+}

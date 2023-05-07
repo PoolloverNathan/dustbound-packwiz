@@ -1,0 +1,251 @@
+#Set this to false when you want to overwrite the default bee files.
+#This should be run at least once for initial generation.
+#
+generateDefaults = false
+#Set to true if you want dev bees to generate.
+enableDevBees = false
+#Set to true if you want supporter bees to generate.
+enableSupporterBees = false
+#When set to true will display some debug info in console.
+showDebugInfo = false
+#Set to false if you want the player to only be able to get honeycombs from the beehive using the scraper
+allowShears = true
+#Sets the max durability for the smoker
+smokerDurability = 1000
+#Set to false if you want hive upgrades to be reusable.
+consumeHiveUpgrade = true
+
+[client]
+	#When set to true an en_us.json file will be generated for the bees.
+	#This file will be overwritten every time the mod loads.
+	#The generated names are based on the bee jsons.
+	#This is best used by pack devs as a one-time run.
+	#
+	generateEnglishLang = false
+
+[bee]
+	#Should bees die from stinging?
+	#Note: Bees will continue to attack until they are no longer angry!
+	#
+	beesDieFromSting = true
+	#Should bees inflict poison damage?
+	#Note: Poison is only inflicted if a bee has not been given a trait with a special damage output.
+	#Set to false if you want to configure bees individually.
+	#
+	beesInflictPoison = true
+	#Should bees die when when they are below the world.
+	#Note: If false, bees will get stuck just below world and not move. **May not be useful with new AI**
+	#
+	beesDieInVoid = true
+	#This is an experimental setting. Using this setting means bees will need to be told by the player which flower and hive to use.
+	#Bees will not scan surroundings for flowers or hives and will instead go to their designated spot until changed.
+	#WARNING: For now, this will prevent bees from having their wander goal attached which effectively makes them dumb (seriously, they'll just hover in one spot), however it would also significantly improve performance until pathfinding can be optimized.
+	#
+	use_experimental_manual_mode = false
+	#The default radius that all bees will use for their auras.
+	#Range: 3 ~ 20
+	beeAuraRange = 10
+	#The frequency, in seconds, that a bee will apply its aura effect.
+	#Set this to a higher value to improve performance
+	#
+	#Range: 5 ~ 15
+	auraFrequency = 6
+
+[recipes]
+	#Set this to false when you want to overwrite the default bees recipes. [true/false]
+	generateDefaultRecipes = false
+	#Set to false if you don't want the honeycomb block recipes to be auto generated [true/false]
+	honeycombBlockRecipes = true
+	#Should honey block recipes be generated? [true/false]
+	honeyBlockRecipes = true
+
+[centrifuge]
+	#Default recipe time for recipes where a time value is not defined.
+	#Range: 100 ~ 2400
+	defaultCentrifugeRecipeTime = 200
+	#RF/t consumed by the centrifuge when processing recipes.
+	#Range: 2 ~ 1000
+	centrifugeRfPerTick = 10
+	#The recipe time modifier is calculated as:
+	#numGearboxes^(1-x/numInputs)
+	#Larger values for X means gearboxes have more impact on the time reduction.
+	#
+	#Range: 0.0 ~ 1.0
+	recipeTimeExponent = 0.1
+	#The gearbox power modifier is calculated as:
+	#1 + (x * 1.1^numGearboxes)
+	#Larger values for X means gearboxes have more impact on the power required to process a recipe.
+	#The calculated modifier is multiplied by the processor power modifier before being applied to the recipe rf/t.
+	#
+	#Range: 0.0 ~ 1.0
+	gearboxPowerExponent = 0.2
+	#The processor power modifier is calculated as:
+	#1 + (x * 1.1^numProcessors)
+	#Larger values for X means processors have more impact on the power required to process a recipe.
+	#The calculated modifier is multiplied by the gearbox power modifier before being applied to the recipe rf/t.
+	#
+	#Range: 0.0 ~ 1.0
+	cpuPowerExponent = 0.4
+
+[worldgen]
+	#Should bee nests generate in world?
+	#Note: They will only generate in biomes where bees can spawn
+	#
+	generateBeeNests = true
+	#Maximum number of bees in the base tier hive.
+	#Range: 1 ~ 4
+	hiveMaxBees = 4
+	#Chance for nest to spawn when generating chunks in overworld category biomes. [1/x]
+	#A higher value means the nest is less likely to spawn.
+	#
+	#Range: 4 ~ 100
+	overworldNestGenerationChance = 48
+	#Chance for nest to spawn when generating chunks in nether category biomes. [1/x]
+	#A higher value means the nest is less likely to spawn.
+	#
+	#Range: 4 ~ 100
+	netherNestGenerationChance = 8
+	#Chance for nest to spawn when generating chunks in end category biomes. [1/x]
+	#A higher value means the nest is less likely to spawn.
+	#
+	#Range: 4 ~ 100
+	endNestGenerationChance = 32
+
+[apiary]
+	#Allowed Values: COMB, BLOCK
+	tierOneApiaryOutput = "COMB"
+	#Range: 1 ~ 64
+	tierOneApiaryQuantity = 8
+	#Allowed Values: COMB, BLOCK
+	tierTwoApiaryOutput = "COMB"
+	#Range: 1 ~ 64
+	tierTwoApiaryQuantity = 16
+	#Allowed Values: COMB, BLOCK
+	tierThreeApiaryOutput = "BLOCK"
+	#Range: 1 ~ 64
+	tierThreeApiaryQuantity = 4
+	#Allowed Values: COMB, BLOCK
+	tierFourApiaryOutput = "BLOCK"
+	#Range: 1 ~ 64
+	tierFourApiaryQuantity = 8
+
+[ender_beecon]
+	#Multiplier for the drain rate for the Ender Beecon when the Calming effect is active.
+	#Range: 1.0 ~ 128.0
+	beeconCalmingValue = 2.0
+	#Multiplier for the drain rate for the Ender Beecon when the Water Breathing effect is active.
+	#Range: 1.0 ~ 128.0
+	beeconWaterBreathingValue = 1.5
+	#Multiplier for the drain rate for the Ender Beecon when the Fire Resistance effect is active.
+	#Range: 1.0 ~ 128.0
+	beeconFireResistanceValue = 2.0
+	#Multiplier for the drain rate for the Ender Beecon when the Regeneration effect is active.
+	#Range: 1.0 ~ 128.0
+	beeconRegenerationValue = 2.5
+	#Multiplier for each level of range applied to the Ender Beecon's drain.
+	#Range: 0.0 ~ 2.0
+	beeconRangeMultiplier = 0.33
+	#The base drain rate for the Ender Beecon when an effect is active.
+	#Range: 1 ~ 128
+	beeconBaseDrain = 1
+	#The amount of fluid per tick the Ender Beecon can pull from below blocks.
+	#Range: 1 ~ 16000
+	beeconPullAmount = 250
+
+[honeycomb]
+	#Whether all honeycombs should be edible by default or not.
+	honeycombsEdible = true
+	#The amount of hunger restored when eating a honeycomb.
+	#Range: 0 ~ 8
+	honeycombHunger = 1
+	#The amount of saturation restored when eating a honeycomb.
+	#Range: 0.0 ~ 8.0
+	honeycombSaturation = 0.6
+
+[honey_generator]
+	#Amount of energy transferred out of the generator in rf/t.
+	#Range: 50 ~ 500
+	energyTransferAmount = 100
+	#Maximum internal energy buffer.
+	#Range: 10000 ~ 1000000
+	maxEnergyCapacity = 100000
+	#Maximum internal honey capacity.
+	#Range: 1000 ~ 100000
+	maxTankCapacity = 10000
+	#Stack limit applies to all honey generator upgrades!
+	#Note: Value cannot be reloaded without restarting game.
+	#
+	#Range: 1 ~ 64
+	upgradeStackLimit = 16
+	#x=b+(b*p*n). (WIP - may change)
+	#b = maxTankCapacity
+	#p = this
+	#n = total upgrades in slot
+	#
+	#Recommended value:
+	#64 stack size: 0.5
+	#32 stack size: 0.5
+	#16 stack size: 0.5
+	#
+	#Range: 0.01 ~ 2.0
+	tankCapacityUpgradeBonus = 0.5
+	#x=b+(b*p*n). (WIP - may change)
+	#b = maxTankCapacity
+	#p = this
+	#n = total upgrades in slot
+	#
+	#Recommended value:
+	#64 stack size: 2.0
+	#32 stack size: 2.0
+	#16 stack size: 2.25
+	#
+	#Range: 0.01 ~ 4.0
+	energyCapacityUpgradeBonus = 2.25
+	#x=b+(b*p*n). (WIP - may change)
+	#b = honey consumption rate
+	#p = this
+	#n = total upgrades in slot
+	#
+	#Recommended value:
+	#64 stack size: 2.0
+	#32 stack size: 2.5
+	#16 stack size: 2.75
+	#
+	#Range: 0.01 ~ 4.0
+	honeyConsumptionUpgradePenalty = 2.75
+	#consumption rate increases as fill rate increases
+	#x=b*p^n. (WIP - may change)
+	#b = energy fill rate
+	#p = this
+	#n = total upgrades in slot
+	#
+	#Recommended value:
+	#64 stack size: 1.1
+	#32 stack size: 1.15
+	#16 stack size: 1.25
+	#
+	#Range: 1.0 ~ 2.0
+	energyFillUpgradeBonus = 1.25
+	#x=b*p^n. (WIP - may change)
+	#b = energy transfer rate
+	#p = this
+	#n = total upgrades in slot
+	#
+	#Recommended value:
+	#64 stack size: 1.15
+	#32 stack size: 1.3
+	#16 stack size: 1.5
+	#
+	#Range: 1.0 ~ 2.0
+	energyTransferUpgradeBonus = 1.5
+
+[solidfication]
+	#Amount of time in ticks required to finish processing a honey bottle.
+	#Range: 0 ~ 2400
+	honeyProcessTime = 5
+	#Multiplier to the amount of ticks needed to process honey into honey blocks in the congealer.
+	#This value is multiplying the honeyProcessTime.
+	#
+	#Range: 1 ~ 16
+	solidficationTimeMultiplier = 4
+

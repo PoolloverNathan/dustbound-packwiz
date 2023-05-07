@@ -1,0 +1,13 @@
+name = "No more Infinite Water"
+filename = "finitewater-forge-4.1-1.19.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9fd33e0127f3d93b8e702dddba82ebb806f830de"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4019529
+project-id = 596461

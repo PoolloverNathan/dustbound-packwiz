@@ -1,0 +1,249 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.TitleScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  path = config/openloader/resources/dustbound/assets/minecraft/textures/gui/title/background/panorama_overlay.png
+  action = texturizebackground
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_copyright_button%
+  orientation = bottom-left
+  x = 0
+  action = movebutton
+  y = -22
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  orientation = mid-centered
+  x = 103
+  action = movebutton
+  y = 6
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  action = setbuttonlabel
+  value = A
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 30
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  orientation = mid-centered
+  x = 2
+  action = movebutton
+  y = 30
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  orientation = mid-centered
+  x = -124
+  action = movebutton
+  y = 30
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  action = setbuttonlabel
+  value = "
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  orientation = mid-centered
+  x = -49
+  action = movebutton
+  y = 54
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  width = 98
+  action = resizebutton
+  height = 21
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_realms_button%
+  action = hidebutton
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 98
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = 6ad73fb0-eaea-447b-ba50-13912e7c6f151683048131995
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 2
+  width = 108
+  action = deep_customization_element:title_screen_branding
+  actionid = 5cee70f1-ccb4-4b98-917f-2ce7551f0cc41683048132001
+  y = 223
+  height = 40
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 236
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = f96ab90f-3f76-4b5a-98de-e1f27b272fbb1683048132001
+  y = 245
+  height = 9
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 335
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = 23c01a02-cbef-4866-8730-f4ae0ea895e51683048132001
+  y = 166
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 95
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = 9ba5e279-827c-49aa-8505-4b76eb3149031683048132001
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = mid-centered
+  splash_color = #ffff00
+  hidden = true
+  x = 70
+  width = 60
+  splash_rotation = 0
+  action = deep_customization_element:title_screen_splash
+  actionid = bbcf8787-7f6a-4048-8e23-c3cdfb850c071683048132001
+  y = -21
+  height = 30
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 0.5
+  source = G.A.C. is not responsible for death or dehydration!
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -64
+  width = 129
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 5ce8204a-1e21-4336-bc46-76a9b833897e1683049195686
+  y = 50
+  alignment = left
+  height = 10
+}
+
+customization {
+  path = config/fancymenu/animations
+  orientation = top-left
+  x = 0
+  width = 0
+  action = addtexture
+  actionid = 04e8dfea-00c1-432b-b13c-358c7928bf2e1683049388470
+  y = 2
+  height = 100
+}
+
+customization {
+  path = config/fancymenu/animations/dustbound.png
+  orientation = top-centered
+  x = -129
+  width = 259
+  action = addtexture
+  actionid = e9002dca-a190-4066-862a-c811766019831683049405126
+  y = 8
+  height = 49
+}
+
+customization {
+  orientation = bottom-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Modpack by Persephone McGlynn (CallMeTess/PersephonesPoms)
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -164
+  width = 328
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 6bca9af0-82af-41a2-b6b8-06dc200ed1f81683049716813
+  y = -12
+  alignment = left
+  height = 12
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 6
+}
+
+customization {
+  identifier = %id=376322%
+  orientation = mid-centered
+  x = -124
+  action = movebutton
+  y = 6
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = -18
+}
+

@@ -1,0 +1,13 @@
+name = "Respawn"
+filename = "respawn-1.19.2-1.0.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a088294fb6de2d5754fa27a81d1133a941034508"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4502574
+project-id = 852464

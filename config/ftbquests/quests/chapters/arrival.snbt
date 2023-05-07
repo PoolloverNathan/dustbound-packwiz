@@ -1,0 +1,488 @@
+{
+	id: "28B2739258ED31D4"
+	group: "2B02DDFFF82BC1BF"
+	order_index: 0
+	filename: "arrival"
+	title: "Arrival"
+	icon: "ad_astra:engine_frame"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "&ePlanetfall"
+			x: 1.0d
+			y: 0.5d
+			shape: "square"
+			subtitle: "&cHere we are..."
+			description: [
+				"&e\"Greetings, employee! Welcome to the G.A.C. terraforming initiative! I am your AI assistant, Esta, and it's my-\""
+				"&c\"Shut up.\""
+				"&e\"I feel it is rather important for me to explain your task here. Survival is imperative if you wish to recieve payment for your terraforming efforts.\""
+				"&c\"Can you just skip to the important parts, please? I want off this planet as soon as possible.\""
+				"&e\"Understood!\""
+			]
+			invisible: true
+			secret: true
+			id: "1ECBA02690A513C5"
+			tasks: [{
+				id: "30802FD9BFB76455"
+				type: "dimension"
+				title: "Planetfall"
+				icon: "create:train_door"
+				disable_toast: true
+				dimension: "override:dust"
+			}]
+			rewards: [
+				{
+					id: "4A68281545F3308B"
+					type: "command"
+					title: "Pod"
+					icon: "supplementaries:candle_holder_gray"
+					auto: "enabled"
+					command: "/execute at @p in override:dust run place template dustbound:pod ~-5 ~-5 ~-7"
+					player_command: false
+				}
+				{
+					id: "21A0AADB4AE0ED82"
+					type: "command"
+					title: " "
+					icon: "supplementaries:timber_frame"
+					auto: "enabled"
+					command: "/effect clear @p"
+					player_command: false
+				}
+				{
+					id: "7F8A3DCE524D3A15"
+					type: "command"
+					title: " "
+					icon: "createdeco:cast_iron_ingot"
+					auto: "enabled"
+					command: "/execute at @p run fill ~ ~3 ~ ~ ~100 ~ createdeco:cast_iron_mesh_fence"
+					player_command: false
+				}
+			]
+		}
+		{
+			title: "&eTrees can't grow here."
+			icon: "minecraft:cactus"
+			x: 2.0d
+			y: 0.0d
+			shape: "square"
+			subtitle: "At least, not yet."
+			description: ["&e\"Cacti, while terrible for building, make a decent substitute for real wood when it comes to making tools! And, lucky for you, bones make a great replacement for sticks! A past intern from the GAC Terraforming Initiative has left some behind for you!\""]
+			dependencies: ["1ECBA02690A513C5"]
+			id: "6FBD1C2C87350D18"
+			tasks: [{
+				id: "78FE692AA8981626"
+				type: "item"
+				item: "minecraft:cactus"
+			}]
+		}
+		{
+			title: "Sans Ex Nihlio"
+			icon: "createsifter:sifter"
+			x: 1.0d
+			y: -1.0d
+			dependencies: ["1ECBA02690A513C5"]
+			id: "3D9421BC92A2F82E"
+			tasks: [
+				{
+					id: "5CE2629505C6E24E"
+					type: "item"
+					item: "kubejs:andesite_threads"
+				}
+				{
+					id: "03D81C9CE43B60FB"
+					type: "item"
+					item: "kubejs:chipped_bone"
+				}
+			]
+		}
+		{
+			icon: "ftbquests:book"
+			x: -1.0d
+			y: 0.0d
+			description: [
+				"Quests are important for progression, but not all of them."
+				"\"Storyline\" quests, indicated by a square frame, are required to progress through the pack, containing information relevant to the narrative and quest rewards that assist with gameplay."
+				"\"Tutorial\" quests are entirely optional, only giving information on how the game works with no rewards. If you're familiar with the pack, or know how to use JEI to browse recipes, you can ignore them without consequence."
+				"Diamond-shaped quests are \"canon\" to the storyline but not strictly required."
+			]
+			id: "600784D571C5D48A"
+			tasks: [{
+				id: "00FE89C5328391E9"
+				type: "checkmark"
+				title: "Questbook Information"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 1.0d
+			dependencies: ["6FBD1C2C87350D18"]
+			id: "4DA8AD54C383504C"
+			tasks: [
+				{
+					id: "7B4D2F7840BA088F"
+					type: "item"
+					item: {
+						id: "minecraft:wooden_shovel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "534E5449AEE468A8"
+					type: "item"
+					item: {
+						id: "minecraft:stone_shovel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "&cBut it's... a rock?"
+			x: 2.0d
+			y: -1.0d
+			shape: "square"
+			description: ["&e\"While sifting through the dust of this planet, you may encounter small threads of the igneous rock known as andesite. This is a highly important material for many reasons, not the least of which is its utility in creating all manner of kinetic machinery.\""]
+			dependencies: ["6FBD1C2C87350D18"]
+			id: "4CF680461D1B091D"
+			tasks: [{
+				id: "5DA3BC3195133910"
+				type: "item"
+				item: "kubejs:andesite_cloth"
+			}]
+		}
+		{
+			title: "Heat \\& Water"
+			icon: "kubejs:climate_information"
+			x: 0.0d
+			y: -1.0d
+			shape: "square"
+			subtitle: "&eRemember to stay hydrated!"
+			description: [
+				"&e\"Now, a critical part of terraforming Dust is going to be staying alive long enough to do so. The heat of this system's sun is quite dangerous, you see, if your body temperature gets above 🔥50 you may experience death-related concequences.\""
+				"&e\"The key to avoiding such a fate is to stay hydrated! As long as your water stays above 🌊10, your temperature will stay stable. Although, a high air temperature may lead to fast-to-rapid rates of dehydration.\""
+				"&e\"A good way to stay cool is to avoid the sun! Placing dust over the habitation to reduce skylight will vastly improve your survival chances.\""
+				"&e\"The environment reader I am about to provide you with will allow for you to detect the surrounding air temperature, and it will later serve as a useful tool in measuring your terraforming progress!\""
+			]
+			dependencies: ["1ECBA02690A513C5"]
+			id: "7ED931E61CB87AA2"
+			tasks: [{
+				id: "7386F8B1D3C28677"
+				type: "checkmark"
+				title: "&cUnderstood"
+			}]
+			rewards: [{
+				id: "66434E25099199DD"
+				type: "item"
+				item: "kubejs:climate_information"
+			}]
+		}
+		{
+			title: "Heat \\& Water Abridged"
+			icon: {
+				id: "minecraft:potion"
+				Count: 1b
+				tag: {
+					Potion: "minecraft:water"
+				}
+			}
+			x: 0.0d
+			y: 0.0d
+			subtitle: "TLDR"
+			description: [
+				"Having hydration below 10 will cause your body temperature to rise. High air temperatures will cause your water to drain faster."
+				"Lower sky light, be it due to nighttime or cover, will reduce the local air temperature."
+			]
+			dependencies: ["1ECBA02690A513C5"]
+			id: "31AA24457CCB04FE"
+			tasks: [{
+				id: "4F253C4FB8A8692A"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "Finding Water"
+			x: 0.0d
+			y: -2.0d
+			shape: "square"
+			description: [
+				"&e\"Throughout the desert you may find small mounds of dust that look out of place. Buried within these are pouches of water that can then be bottled and drunk!\""
+				"&e\"I would reccommend searching for these at night, to avoid dehydration and heat stroke.\""
+				"&c\"What about the hostile creatures of the night?\""
+				"&e\"Don't be silly! The G.A.C. has officially declared this planet lifeless, there's nothing to be afraid of out there.\""
+			]
+			dependencies: ["7ED931E61CB87AA2"]
+			id: "4E90AB088C9A5F4A"
+			tasks: [{
+				id: "7F600C9497EA8B15"
+				type: "item"
+				item: "kubejs:hydrated_orb"
+			}]
+			rewards: [{
+				id: "5870884DDAC4E39F"
+				type: "item"
+				item: "farmersdelight:cutting_board"
+			}]
+		}
+		{
+			title: "Taking Stock"
+			x: 3.0d
+			y: -1.0d
+			shape: "diamond"
+			subtitle: "Something to keep yourself alive."
+			description: [
+				"&cEsta keeps telling me there's no life out here, despite the very obvious signs of deadly creatures all around me."
+				"&cLuckily it seems they are somewhat edible..."
+			]
+			dependencies: ["4CF680461D1B091D"]
+			id: "680D63DC343C15A2"
+			tasks: [
+				{
+					id: "71BB085803661688"
+					type: "item"
+					item: "farmersdelight:bone_broth"
+					count: 4L
+				}
+				{
+					id: "03518A319BA7A288"
+					type: "item"
+					item: "kubejs:monster_jerky"
+				}
+				{
+					id: "21D6864926E39BBE"
+					type: "item"
+					item: "farmersdelight:cooking_pot"
+				}
+			]
+		}
+		{
+			title: "Replacement Environment Reader"
+			icon: "kubejs:climate_information"
+			x: -1.0d
+			y: -1.0d
+			dependencies: ["7ED931E61CB87AA2"]
+			can_repeat: true
+			id: "2E46BE400FFB9FB9"
+			tasks: [{
+				id: "22B3FCFC69F8341C"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "7D64F38E07212210"
+				type: "item"
+				item: "kubejs:climate_information"
+			}]
+		}
+		{
+			title: "Preserving Hunger"
+			x: 3.0d
+			y: -2.0d
+			description: [
+				"Building even a small windmill will let you power your machines without being a constant drain on your hunger bar."
+				"Unfortunately, you'll need sails in order to do so, and andesite cloth is too heavy for that."
+				"Making wool from spiders' string will be your best option, for now."
+			]
+			dependencies: ["5A67A5D562E2A00F"]
+			id: "043A49138AD2CB2E"
+			tasks: [
+				{
+					id: "0B211CFB88D2B93F"
+					type: "item"
+					item: "create:white_sail"
+				}
+				{
+					id: "3E6D919B49F32ACA"
+					type: "item"
+					item: "create:windmill_bearing"
+				}
+				{
+					id: "733347111D7B45CD"
+					type: "kill"
+					entity: "minecraft:spider"
+					value: 2L
+				}
+			]
+		}
+		{
+			title: "Faster Cacti"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["6FBD1C2C87350D18"]
+			id: "232AB281E0C320A0"
+			tasks: [{
+				id: "7BC3AFC238CA331F"
+				type: "item"
+				item: "botanypots:light_gray_concrete_botany_pot"
+			}]
+		}
+		{
+			title: "Death"
+			x: -1.0d
+			y: -2.0d
+			description: ["This pack is not in hardcore mode, &ohowever&r, death will leave you in a seriously debilitated state, and you will need to spend a &cLife Gem &fto cure this ailment. You should keep these somewhere safe in your base so you can cure yourself immediately, and make sure you are careful not to die too much, as getting more will be costly."]
+			dependencies: ["7ED931E61CB87AA2"]
+			id: "2FC49BCCF0C652B9"
+			tasks: [{
+				id: "1407223FD1F556BA"
+				type: "item"
+				item: "kubejs:life_crystal"
+			}]
+		}
+		{
+			title: "Age of automation"
+			x: 2.0d
+			y: -2.0d
+			shape: "square"
+			dependencies: ["4CF680461D1B091D"]
+			id: "5A67A5D562E2A00F"
+			tasks: [{
+				id: "639EE20D9C8A7071"
+				type: "item"
+				item: "create:andesite_alloy"
+			}]
+		}
+		{
+			title: "That's more like it."
+			x: 1.0d
+			y: -5.0d
+			shape: "gear"
+			dependencies: [
+				"5A67A5D562E2A00F"
+				"4E90AB088C9A5F4A"
+			]
+			size: 2.0d
+			id: "33BDFDDC3B6215E5"
+			tasks: [
+				{
+					id: "1B45AB0E3C01326F"
+					type: "item"
+					item: "mekanism:dirty_dust_iron"
+				}
+				{
+					id: "6E06793B2A712F20"
+					type: "item"
+					item: "minecraft:iron_nugget"
+				}
+				{
+					id: "199F76814BCDC372"
+					type: "item"
+					item: "minecraft:iron_ingot"
+				}
+			]
+		}
+		{
+			title: "Tools of the trade"
+			x: 2.0d
+			y: -3.0d
+			dependencies: ["5A67A5D562E2A00F"]
+			id: "0CCECE18A9B11C90"
+			tasks: [
+				{
+					id: "5D1D6C182218D792"
+					type: "item"
+					item: "create:basin"
+				}
+				{
+					id: "6013292F668178A8"
+					type: "item"
+					item: "create:mechanical_mixer"
+				}
+				{
+					id: "7F028D4DD6AFF6D7"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+				{
+					id: "5204A475F2DD113B"
+					type: "item"
+					item: "create:depot"
+				}
+				{
+					id: "655F1DFB51D511BB"
+					type: "item"
+					item: "create:millstone"
+				}
+				{
+					id: "3F0B7D3A9B674D8F"
+					type: "item"
+					item: "extendedgears:iron_cogwheel"
+				}
+			]
+		}
+		{
+			title: "Cactus Press"
+			x: 0.0d
+			y: -3.0d
+			dependencies: ["4E90AB088C9A5F4A"]
+			id: "38E62550F347E3DC"
+			tasks: [
+				{
+					id: "5997E5CFDB0FF775"
+					type: "item"
+					item: "kubejs:cactus_piece"
+				}
+				{
+					id: "5B8A9D1D74B71051"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+				{
+					id: "44D4506A5225AC7A"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:water"
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Tetration"
+			x: 0.0d
+			y: 1.0d
+			dependencies: ["4DA8AD54C383504C"]
+			id: "5CCE178E1D1CFF7B"
+			tasks: [{
+				id: "32152C735DBC3631"
+				type: "item"
+				item: "create:limestone"
+			}]
+		}
+		{
+			title: "The Worse Iron"
+			x: 1.0d
+			y: -2.0d
+			dependencies: ["3D9421BC92A2F82E"]
+			id: "5DBDDEA82A7F9BC3"
+			tasks: [
+				{
+					id: "0060A4DB072BCE1A"
+					type: "item"
+					item: "kubejs:poor_iron"
+				}
+				{
+					id: "2555AA642D1806DF"
+					type: "item"
+					item: "kubejs:poor_iron_ingot"
+				}
+				{
+					id: "7D330FFA9C380197"
+					type: "item"
+					item: "kubejs:poor_iron_sheet"
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

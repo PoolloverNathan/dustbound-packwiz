@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "spawn": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "function": "dustbound:dustspawn"
+  }
+}
